@@ -11,6 +11,7 @@ const {
   AUTH_GOOGLE_ACTIVE,
   AUTH_FACEBOOK_ACTIVE,
   STORAGE_ACTIVE,
+  CLIENT_DOMAIN
 } = require('./config');
 
 const app = express();
@@ -19,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
 	credentials: true,
-	origin: true,
+	origin: CLIENT_DOMAIN,
 }));
 app.use(morgan('tiny'));
 app.use(cookieParser());
