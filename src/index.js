@@ -16,12 +16,22 @@ const {
 
 const app = express();
 
+console.log('CLIENT_DOMAIN', CLIENT_DOMAIN);
 // middleware
 app.use(express.json());
+
 app.use(cors({
 	credentials: true,
-	origin: CLIENT_DOMAIN,
+  origin: function (origin, callback) {
+    console.log(CLIENT_DOMAIN, origin);
+    if (CLIENT_DOMAIN.indexOf(origin) !== -1 || !origin) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
 }));
+
 app.use(morgan('tiny'));
 app.use(cookieParser());
 app.disable('x-powered-by');
