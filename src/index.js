@@ -77,6 +77,10 @@ app.use('/healthz', (req, res) => {
   res.send('OK');
 });
 
+app.use('/', (req, res) => {
+  res.send(200);
+});
+
 // error handler
 app.use((err, req, res, next) => {
 	if (err) {
