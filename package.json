@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elitan/hasura-backend-plus.git"
+    "url": "git+https://github.com/exostic/hasura-backend-plus.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elitan/hasura-backend-plus/issues"
+    "url": "https://github.com/exostic/hasura-backend-plus/issues"
   },
-  "homepage": "https://github.com/elitan/hasura-backend-plus#readme",
+  "homepage": "https://github.com/exostic/hasura-backend-plus#readme",
   "dependencies": {
     "@hapi/boom": "^8.0.1",
     "aws-sdk": "^2.362.0",

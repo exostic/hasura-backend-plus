@@ -10,7 +10,7 @@ exports.USER_FIELDS = process.env.USER_FIELDS ? process.env.USER_FIELDS.split(',
 exports.USER_REGISTRATION_AUTO_ACTIVE = process.env.USER_REGISTRATION_AUTO_ACTIVE ? process.env.USER_REGISTRATION_AUTO_ACTIVE === 'true' : false;
 exports.JWT_TOKEN_EXPIRES = process.env.JWT_TOKEN_EXPIRES || 15; // expire after 15 minutes
 exports.REFRESH_TOKEN_EXPIRES = process.env.REFRESH_TOKEN_EXPIRES || (60*24*30); // expire after 30 days
-exports.CLIENT_DOMAIN = process.env.CLIENT_DOMAIN.map((value) => value.trim()) || "true"
+exports.CLIENT_DOMAIN = process.env.CLIENT_DOMAIN.split(",").map((value) => value.trim()) || "true"
 
 // AUTH LOCAL
 exports.AUTH_LOCAL_ACTIVE = process.env.AUTH_LOCAL_ACTIVE ? process.env.AUTH_LOCAL_ACTIVE === 'true' : false;
